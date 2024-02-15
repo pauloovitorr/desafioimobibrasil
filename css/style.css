@@ -1,0 +1,220 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+h1{
+   color: #000000;
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    color: #292929;
+    
+}
+
+.corretor{
+    width: 45%;
+    height: 600px;
+    margin-top: 50px;
+}
+
+#frase{
+    width: 70%;
+}
+
+#frase p {
+    font-size: 0.9rem;
+}
+
+.nome_img{
+    display: flex;
+    margin-top: 60px;
+}
+
+.div_img{
+    width: 23%;
+}
+
+.div_img img{
+    width: 100px;
+    border: 2px solid #007cef;
+    border-radius: 50%;
+}
+
+.div_nome h2{
+    color: #007cef;
+}
+
+.div_nome p{
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.container_icone{
+    margin-top: 25px;
+}
+
+.icones{
+    display: flex;
+}
+
+.icones i{
+    width: 40px;
+    color: #007cef;
+    font-size: 25px;
+}
+
+.crud{
+    width: 45%;
+}
+
+.img_casas{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.img_casas img{
+    width: 250px;
+}
+
+.div_form{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.div_input{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.div_input label{
+    font-weight: 600;
+}
+
+.div_input input{
+    padding: 8px;
+    border: 1px solid #292929;
+    border-radius: 5px;
+}
+
+.div_input textarea{
+    padding: 12px;
+    border: 1px solid #292929;
+    border-radius: 5px;
+}
+
+#btn_enviar{
+    background-color: #007cef;
+    color: white;
+    border: none;
+    margin-bottom: 15px;
+}
+
+.img_aviao{
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (max-width:1150px) {
+    .div_img{
+        width: 35%;
+    }
+
+    #frase{
+        width: 80%;
+    }
+    
+}
+
+
+@media (max-width:750px) {
+   
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .corretor{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .crud{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .img_casas img{
+        width: 200px;
+    }
+
+}
+
+
+@media (max-width:550px) {
+   
+    .container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .corretor{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .crud{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .div_img{
+        width: 40%;
+    }
+
+    .div_nome h2{
+        font-size: 1.3rem;
+        margin-top: 15px;
+    }
+
+    .div_nome p{
+        font-size: 1rem;
+    }
+
+    h1{
+        font-size: 1.4rem;
+    }
+
+    #frase{
+        width: 90%;
+    }
+    #frase p{
+        font-size: 14px
+    }
+
+    .img_casas img{
+        width: 150px;
+    }
+
+    .img_aviao{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .img_aviao img{
+        width: 220px;
+    }
+
+}
