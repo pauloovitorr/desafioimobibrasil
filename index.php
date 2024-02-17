@@ -4,6 +4,7 @@ include_once('./conexao.php')
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,7 +88,7 @@ include_once('./conexao.php')
 
                     <div class="div_input">
                         <label for="tel">Telefone</label>
-                        <input type="text" id="tel" placeholder="Seu nome">
+                        <input type="text" id="tel" placeholder="Seu telefone">
                     </div>
 
                     <div class="div_input">

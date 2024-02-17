@@ -162,7 +162,7 @@ h1{
 }
 
 
-@media (max-width:550px) {
+@media (max-width:555px) {
    
     .container{
         display: flex;
@@ -214,7 +214,7 @@ h1{
     }
 
     .img_aviao img{
-        width: 220px;
+        width: 222px;
     }
 
 }
