@@ -64,7 +64,6 @@ include_once('./conexao.php')
                     <p>rafaelc@contato.com</p>
                 </div>
             </div>
-
         </div>
 
         <div class="crud">
