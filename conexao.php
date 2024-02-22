@@ -16,5 +16,4 @@ $conect = new mysqli($host,$usuario,$senha,$bd);
 //     echo 'Deu bom';
 // }
 
-
 ?>

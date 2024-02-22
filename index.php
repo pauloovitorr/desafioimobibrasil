@@ -1,6 +1,8 @@
 <?php 
 
-include_once('./conexao.php')
+include_once('./conexao.php');
+
+
 
 ?>
 
@@ -110,5 +112,33 @@ include_once('./conexao.php')
         </div>
     </main>
 
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+
+
+            let obj={
+                nome: $('#nome').val()
+            }
+             
+
+
+
+
+            $('#btn_enviar').click(function(){
+                $.ajax({
+                    url: 'index.php',
+                    method: 'POST',
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    data: JSON.stringify(obj),
+                    success: function(dado){
+                        $('#nome').val('sucesso')
+                    }
+                })
+            })
+        })
+    </script>
 </body>
 </html>
