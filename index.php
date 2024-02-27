@@ -76,29 +76,29 @@ include_once('./conexao.php');
 
             <div class="div_form">
                 
-                <form action="">
+                <form action="" method="post">
                     <div class="div_input">
                         <label for="nome">Nome</label>
-                        <input type="text" id="nome" placeholder="Seu nome">
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome">
                     </div>
 
                     <div class="div_input">
                         <label for="email">Email</label>
-                        <input type="text" id="email" placeholder="contato@exemplo.com">
+                        <input type="text" id="email" name="email" placeholder="contato@exemplo.com">
                     </div>
 
                     <div class="div_input">
                         <label for="tel">Telefone</label>
-                        <input type="text" id="tel" placeholder="Seu telefone">
+                        <input type="text" id="tel" name="tel" placeholder="Seu telefone">
                     </div>
 
                     <div class="div_input">
                         <label for="msg">Mensagem</label>
-                        <textarea name="msg" id="msg" cols="25" rows="5" placeholder="Como posso te ajudar"></textarea>
+                        <textarea name="msg" id="msg" name="msg" cols="25" rows="5" placeholder="Como posso te ajudar"></textarea>
                     </div>
 
                     <div class="div_input">
-                        <input id="btn_enviar" type="submit" value="Enviar">
+                        <input id="btn_enviar" type="submit" name="btn_input" value="Enviar">
                     </div>
 
                 </form>
