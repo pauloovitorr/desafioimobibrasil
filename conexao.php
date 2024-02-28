@@ -1,19 +1,18 @@
 <?php
 
 $host = 'localhost';
-$usuario = 'root';
-$senha = '';
-$bd =  'leads' ;
+$user = 'root';
+$pass = '';
+$db = 'leads';
 
-$conect = new mysqli($host,$usuario,$senha,$bd);
+$conexao = new mysqli($host,$user,$pass,$db);
 
-// if($conect->error)
-// {
-//     echo "Deu erro";
+// if($conexao->error){
+//     echo 'Deu erro';
 // }
-// else
-// {
-//     echo 'Deu bom';
+// else{
+//     echo "Conectado ao banco";
 // }
+
 
 ?>
