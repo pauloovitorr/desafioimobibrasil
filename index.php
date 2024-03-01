@@ -1,12 +1,3 @@
-<?php 
-
-
-include_once('./conexao.php');
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +5,13 @@ include_once('./conexao.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous" defer></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous" defer></script>
+
+    <script>
+        $(document).ready(function(){
+            alert('oi')
+        })
+    </script> -->
     
     <title>Document</title>
 </head>
@@ -77,7 +74,7 @@ include_once('./conexao.php');
 
             <div class="div_form">
                 
-                <form action="" method="post">
+                <form action="./requisicoes.php" method="post">
                     <div class="div_input">
                         <label for="nome">Nome</label>
                         <input type="text" id="nome" name="nome" placeholder="Seu nome">
@@ -112,34 +109,5 @@ include_once('./conexao.php');
 
         </div>
     </main>
-
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function(){
-
-
-            let obj={
-                nome: $('#nome').val()
-            }
-             
-
-
-
-
-            $('#btn_enviar').click(function(){
-                $.ajax({
-                    url: 'index.php',
-                    method: 'POST',
-                    dataType: 'json',
-                    contentType: 'application/json',
-                    data: JSON.stringify(obj),
-                    success: function(dado){
-                        $('#nome').val('sucesso')
-                    }
-                })
-            })
-        })
-    </script>
 </body>
 </html>
