@@ -4,14 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
+
+        
         $(document).ready(function(){
-            alert('oi')
+           
+
+            $('#nome').on('input',()=>{
+                let nome = $('#nome').val()
+                let mascara = /\D/
+
+                if(mascara.test(nome)){
+                   
+                }else{
+                   
+                }
+
+            })
+
+            
+
+            $('#tel').mask('(99)99999-9999');
         })
-    </script> -->
+    </script>
+  
     
     <title>Document</title>
 </head>
@@ -77,22 +96,22 @@
                 <form action="./requisicoes.php" method="post">
                     <div class="div_input">
                         <label for="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" placeholder="Seu nome">
+                        <input type="text" id="nome" name="nome" maxlength=120 placeholder="Seu nome" required>
                     </div>
 
                     <div class="div_input">
                         <label for="email">Email</label>
-                        <input type="text" id="email" name="email" placeholder="contato@exemplo.com">
+                        <input type="text" id="email" name="email" maxlength=100 placeholder="contato@exemplo.com" required>
                     </div>
 
                     <div class="div_input">
                         <label for="tel">Telefone</label>
-                        <input type="text" id="tel" name="tel" placeholder="Seu telefone">
+                        <input type="text" id="tel" name="tel" placeholder="Seu telefone" required>
                     </div>
 
                     <div class="div_input">
                         <label for="msg">Mensagem</label>
-                        <textarea name="msg" id="msg" name="msg" cols="25" rows="5" placeholder="Como posso te ajudar"></textarea>
+                        <textarea name="msg" id="msg" name="msg" cols="25" rows="5" maxlength=250 placeholder="Como posso te ajudar" required></textarea>
                     </div>
 
                     <div class="div_input">
@@ -108,6 +127,10 @@
             </div>
 
         </div>
+
+        <p id="oi"></p>
     </main>
+
+
 </body>
 </html>
