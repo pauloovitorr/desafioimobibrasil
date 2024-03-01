@@ -120,6 +120,7 @@ h1{
     color: white;
     border: none;
     margin-bottom: 15px;
+    cursor: pointer;
 }
 
 .img_aviao{
@@ -129,6 +130,11 @@ h1{
 
 .img_aviao img{
     width: 90%;
+}
+
+.vermelho{
+    color: red;
+    border: 1px solid red !important;
 }
 
 

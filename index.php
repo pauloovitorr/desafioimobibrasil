@@ -15,14 +15,24 @@
 
             $('#nome').on('input',()=>{
                 let nome = $('#nome').val()
-                let mascara = /\D/
-
-                if(mascara.test(nome)){
-                   
+                let mascaraNome = /^\D+$/
+              
+                if(mascaraNome.test(nome)){
+                    $('#nome').removeClass('vermelho')
                 }else{
-                   
+                    $('#nome').addClass('vermelho')
                 }
+            })
 
+            $('#email').on('input',()=>{
+                let email = $('#email').val()
+                let mascaraEmail = /^[a-zA-Z0-9._-]+@[a-z]+\.[a-z]{2,}$/;
+
+                if(mascaraEmail.test(email)){
+                    $('#email').removeClass('vermelho')
+                }else{
+                    $('#email').addClass('vermelho')
+                }
             })
 
             
