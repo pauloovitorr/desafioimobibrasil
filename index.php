@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
 
@@ -62,14 +64,34 @@
                         email: $('#email').val()
                     },
                     success: function(res){
+                        
                         if(res.success){
-                            console.log('Sucesso:', res.message);
+                            Swal.fire({
+                                title: 'Sucesso!',
+                                text: res.message,
+                                icon: 'success',
+                                confirmButtonText: 'Confirmar'
+                                })
+                               $('#nome').val(''),
+                               $('#tel').val(''),
+                               $('#msg').val(''),
+                               $('#email').val('')
                         }else{
-                            console.error('Erro na requisição:', res.message);
+                            Swal.fire({
+                                title: 'Error!',
+                                text: res.message,
+                                icon: 'error',
+                                confirmButtonText: 'Fechar'
+                                })
                         }
                     },
                     error: function(res){
-                        console.error('Erro na requisição:' , res)
+                        Swal.fire({
+                                title: 'Error!',
+                                text: res.message,
+                                icon: 'error',
+                                confirmButtonText: 'Fechar'
+                                })
                     },
                 })
 
