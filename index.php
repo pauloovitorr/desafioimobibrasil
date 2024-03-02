@@ -11,8 +11,9 @@
 
         
         $(document).ready(function(){
-           
 
+            // Inicio das validações
+           
             $('#nome').on('input',()=>{
                 let nome = $('#nome').val()
                 let mascaraNome = /^\D+$/
@@ -24,7 +25,7 @@
                 }
             })
 
-            $('#email').on('input',()=>{
+            $('#email').on('blur',()=>{
                 let email = $('#email').val()
                 let mascaraEmail = /^[a-zA-Z0-9._-]+@[a-z]+\.[a-z]{2,}$/;
 
@@ -34,10 +35,46 @@
                     $('#email').addClass('vermelho')
                 }
             })
-
-            
-
             $('#tel').mask('(99)99999-9999');
+            $('#tel').on('blur',()=>{
+                let tamanho  =  $('#tel').val()
+
+                if(tamanho.length <= 13){
+                    $('#tel').addClass('vermelho')
+                }else{
+                    $('#tel').removeClass('vermelho')
+                }
+            })
+
+            // Fim das validações
+
+            $('#btn_enviar').click((event)=>{
+                event.preventDefault()
+
+                $.ajax({
+                    url: 'requisicoes.php',
+                    method: 'POST',
+                    dataType: 'json',
+                    data: {
+                        nome: $('#nome').val(),
+                        tel:$('#tel').val(),
+                        msg: $('#msg').val(),
+                        email: $('#email').val()
+                    },
+                    success: function(res){
+                        if(res.success){
+                            console.log('Sucesso:', res.message);
+                        }else{
+                            console.error('Erro na requisição:', res.message);
+                        }
+                    },
+                    error: function(res){
+                        console.error('Erro na requisição:' , res)
+                    },
+                })
+
+            })
+
         })
     </script>
   
@@ -103,7 +140,7 @@
 
             <div class="div_form">
                 
-                <form action="./requisicoes.php" method="post">
+                <form action="">
                     <div class="div_input">
                         <label for="nome">Nome</label>
                         <input type="text" id="nome" name="nome" maxlength=120 placeholder="Seu nome" required>
