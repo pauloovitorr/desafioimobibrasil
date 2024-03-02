@@ -53,7 +53,9 @@
             $('#btn_enviar').click((event)=>{
                 event.preventDefault()
 
-                $.ajax({
+                if($('.vermelho').length === 0){
+
+                    $.ajax({
                     url: 'requisicoes.php',
                     method: 'POST',
                     dataType: 'json',
@@ -94,7 +96,15 @@
                                 })
                     },
                 })
-
+                }else{
+                    Swal.fire({
+                                title: 'Error!',
+                                text: 'Preencha todos os campos com dados válidos',
+                                icon: 'error',
+                                confirmButtonText: 'Fechar'
+                                })
+                                $('.vermelho').val('')
+                }
             })
 
         })
