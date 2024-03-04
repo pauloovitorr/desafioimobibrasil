@@ -18,10 +18,14 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['nome'] && !empty($_PO
    if ($comando->error) {
       $response = array('success' => false, 'message' => 'Erro ao inserir dados no banco: ' . $comando->error);
   } else {
-      $response = array('success' => true, 'message' => 'Dados inseridos com sucesso');
+      $response = array('success' => true, 'message' => 'Mensagem enviada ao corretor');
   }
   
-  echo json_encode($response);
+    echo json_encode($response);
+}
+else{
+    $response = array('success' => false, 'message' => 'Preencha todos os campos do formulário');
+    echo json_encode($response);
 }
 
 ?>

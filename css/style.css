@@ -14,13 +14,12 @@ h1{
 }
 
 .container{
-    width: 85%;
+    max-width: 1200px;
     margin: 0 auto;
     margin-top: 30px;
     display: flex;
     justify-content: center;
     color: #292929;
-    
 }
 
 .corretor{
